@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>WiFi Analyzer</title>
+
+    <meta
+        name="description"
+        content="Simple internet speed analyzer."
+    >
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="app">
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <div class="wifi-icon">
+                ⌁
+            </div>
+
+            <div>
+
+                <h1>
+                    WiFi Analyzer
+                </h1>
+
+                <p>
+                    Internet speed test
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- TEST CONTROL -->
+
+    <section class="test-card">
+
+        <div class="test-status">
+
+            <span id="statusDot"></span>
+
+            <span id="statusText">
+                Ready to test
+            </span>
+
+        </div>
+
+
+        <button
+            id="startTest"
+            class="start-button"
+        >
+            START TEST
+        </button>
+
+    </section>
+
+
+    <!-- UPLOAD -->
+
+    <section class="metric-card">
+
+        <div class="metric-header">
+
+            <span>
+                UPLOAD
+            </span>
+
+            <span class="metric-unit">
+                Mbps
+            </span>
+
+        </div>
+
+
+        <div class="speed-value">
+
+            <span id="uploadSpeed">
+                --
+            </span>
+
+        </div>
+
+
+        <div class="speed-bar">
+
+            <div
+                id="uploadBar"
+                class="speed-fill upload-fill"
+            ></div>
+
+        </div>
+
+
+        <p class="metric-description">
+            Data sent to the internet
+        </p>
+
+    </section>
+
+
+    <!-- DOWNLOAD -->
+
+    <section class="metric-card">
+
+        <div class="metric-header">
+
+            <span>
+                DOWNLOAD
+            </span>
+
+            <span class="metric-unit">
+                Mbps
+            </span>
+
+        </div>
+
+
+        <div class="speed-value">
+
+            <span id="downloadSpeed">
+                --
+            </span>
+
+        </div>
+
+
+        <div class="speed-bar">
+
+            <div
+                id="downloadBar"
+                class="speed-fill download-fill"
+            ></div>
+
+        </div>
+
+
+        <p class="metric-description">
+            Data received from the internet
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        &copy; 2026 Aaditya Singh Jamwal
+    </footer>
+
+
+</main>
+
+
+<!-- CONNECTION STATUS -->
+
+<div
+    id="connectionStatus"
+    class="connection-status online"
+>
+
+    <span id="connectionDot"></span>
+
+    <span id="connectionText">
+        ONLINE
+    </span>
+
+</div>
+
+
+<script src="./script.js"></script>
+
+</body>
+
+</html>

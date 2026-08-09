@@ -1,0 +1,506 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+
+    --background: #0b0f14;
+
+    --card: #121821;
+
+    --border: #202a36;
+
+    --text: #f5f7fa;
+
+    --muted: #8d99a8;
+
+    --green: #32d583;
+
+    --blue: #3b82f6;
+
+    --red: #ef4444;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #172333 0%,
+            var(--background) 45%
+        );
+
+    color: var(--text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+}
+
+
+.app {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    padding:
+        24px
+        16px
+        80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+
+    margin-bottom: 8px;
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.wifi-icon {
+
+    width: 44px;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #172333;
+
+    color: var(--green);
+
+    font-size: 30px;
+
+    font-weight: bold;
+}
+
+
+h1 {
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+.header p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-top: 3px;
+}
+
+
+/* ================================
+   TEST CARD
+================================ */
+
+.test-card {
+
+    background: var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    text-align: center;
+}
+
+
+.test-status {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+#statusDot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    transition:
+        background 0.2s;
+}
+
+
+/* ================================
+   START BUTTON
+================================ */
+
+.start-button {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    background: var(--green);
+
+    color: #06120b;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s,
+        opacity 0.15s;
+}
+
+
+.start-button:hover {
+
+    opacity: 0.9;
+}
+
+
+.start-button:active {
+
+    transform: scale(0.98);
+}
+
+
+.start-button:disabled {
+
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+
+/* ================================
+   SPEED CARDS
+================================ */
+
+.metric-card {
+
+    width: 100%;
+
+    background: var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 18px;
+
+    padding: 24px;
+}
+
+
+.metric-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.metric-unit {
+
+    color: #667384;
+}
+
+
+.speed-value {
+
+    margin:
+        22px
+        0
+        18px;
+
+    font-size: 48px;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+
+.speed-bar {
+
+    width: 100%;
+
+    height: 14px;
+
+    background: #202833;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.speed-fill {
+
+    height: 100%;
+
+    width: 0%;
+
+    border-radius: inherit;
+
+    transition:
+        width 0.15s linear;
+}
+
+
+.upload-fill {
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #3b82f6
+        );
+}
+
+
+.download-fill {
+
+    background:
+        linear-gradient(
+            90deg,
+            #22c55e,
+            #32d583
+        );
+}
+
+
+.metric-description {
+
+    color: #687586;
+
+    font-size: 12px;
+
+    margin-top: 12px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+
+    margin-top: auto;
+
+    padding-top: 8px;
+
+    text-align: center;
+
+    color: #536070;
+
+    font-size: 11px;
+}
+
+
+/* ================================
+   CONNECTION STATUS
+================================ */
+
+.connection-status {
+
+    position: fixed;
+
+    right: 18px;
+
+    bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+        8px
+        12px;
+
+    border-radius: 20px;
+
+    background: rgba(
+        18,
+        24,
+        33,
+        0.95
+    );
+
+    border:
+        1px solid
+        var(--border);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.25);
+
+    transition:
+        color 0.2s,
+        border-color 0.2s;
+}
+
+
+#connectionDot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    box-shadow:
+        0 0 8px
+        rgba(50, 213, 131, 0.7);
+}
+
+
+.connection-status.online {
+
+    color: var(--green);
+}
+
+
+.connection-status.offline {
+
+    color: var(--red);
+
+    border-color:
+        rgba(
+            239,
+            68,
+            68,
+            0.35
+        );
+}
+
+
+.connection-status.offline
+#connectionDot {
+
+    background: var(--red);
+
+    box-shadow:
+        0 0 8px
+        rgba(239, 68, 68, 0.7);
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 520px) {
+
+    .app {
+
+        padding:
+            18px
+            12px
+            80px;
+    }
+
+
+    .metric-card {
+
+        padding: 22px;
+    }
+
+
+    .speed-value {
+
+        font-size: 42px;
+    }
+
+
+    .connection-status {
+
+        right: 12px;
+
+        bottom: 12px;
+    }
+}
