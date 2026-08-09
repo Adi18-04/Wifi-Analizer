@@ -2,6 +2,8 @@
 
 A simple browser-based internet speed tester built with **HTML, CSS, and JavaScript**.
 
+https://adi18-04.github.io/Wifi-Analizer/
+
 ### Features
 
 * Download speed test
